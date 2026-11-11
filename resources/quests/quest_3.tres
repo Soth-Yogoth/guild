@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://c81iejb3otclf"]
+
+[ext_resource type="Script" uid="uid://brf0d226jrpyi" path="res://scripts/resources/quest_data.gd" id="1_pv60y"]
+
+[resource]
+script = ExtResource("1_pv60y")
+title = "Крысы в подвале"
+description = "Это невыносимо! Я уже три дня не могу нормально поспать, а всё из-за этого писка. Писк доносится из подвала — судя по всему, там завелись крысы. Вы же поможете мне от них избавиться?"
+deadline = 3
+upfront = 200
+reward = 300
+metadata/_custom_type_script = "uid://brf0d226jrpyi"

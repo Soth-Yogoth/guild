@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cw27eml1ptyk"]
+
+[ext_resource type="Script" uid="uid://cworirxe11ulf" path="res://scripts/active_quests_view.gd" id="1_6q7n1"]
+
+[node name="Control" type="Control" unique_id=1910572543]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+script = ExtResource("1_6q7n1")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=738057865]
+custom_minimum_size = Vector2(300, 600)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -300.0
+offset_right = 150.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1167381349]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer/MarginContainer" unique_id=296438290]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="QuestItemsContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/ScrollContainer" unique_id=588454740]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10

@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cko4e51p2i601"]
+
+[ext_resource type="Script" uid="uid://lmjurdqjp1lw" path="res://scripts/ui_elements/quest_info.gd" id="1_n67l7"]
+[ext_resource type="Script" uid="uid://cmu7r51c4em87" path="res://scripts/quest_content.gd" id="2_b4ff3"]
+[ext_resource type="Texture2D" uid="uid://dw4l6xj473cve" path="res://assets/img/buttons/green_button_free.png" id="3_71ycc"]
+[ext_resource type="Texture2D" uid="uid://bs2lwxox2ssa5" path="res://assets/img/buttons/green_button_presed.png" id="4_0nekr"]
+[ext_resource type="Texture2D" uid="uid://dar5mgg8nwyvy" path="res://assets/img/buttons/red_button_free.png" id="5_yg53y"]
+[ext_resource type="Texture2D" uid="uid://dtkt2vs0cn5ah" path="res://assets/img/buttons/red_button_presed.png" id="6_uljhd"]
+
+[node name="QuestInfo" type="PanelContainer" unique_id=1260343331]
+self_modulate = Color(3.9777355, 2.6733465, 1.8432809, 1)
+custom_minimum_size = Vector2(400, 400)
+custom_maximum_size = Vector2(400, 400)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n67l7")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1196426592]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1971993893]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1872230333]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 24
+text = "Название"
+fit_content = true
+scroll_active = false
+
+[node name="QuestContent" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1274436889]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+text = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
+"
+script = ExtResource("2_b4ff3")
+
+[node name="Deadline" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1150525762]
+layout_mode = 2
+text = "Срок: 3 дня"
+fit_content = true
+scroll_active = false
+
+[node name="RewardText" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1328440553]
+layout_mode = 2
+text = "Вознаграждение: 100 (предоплата 20%)"
+fit_content = true
+scroll_active = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=718191301]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 2
+
+[node name="Button" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=22698983]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 24)
+layout_mode = 2
+texture_normal = ExtResource("3_71ycc")
+texture_pressed = ExtResource("4_0nekr")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button2" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=782772614]
+texture_filter = 1
+custom_minimum_size = Vector2(64, 24)
+layout_mode = 2
+texture_normal = ExtResource("5_yg53y")
+texture_pressed = ExtResource("6_uljhd")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="meta_clicked" from="MarginContainer/VBoxContainer/QuestContent" to="MarginContainer/VBoxContainer/QuestContent" method="_on_meta_clicked"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_accept"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="_on_decline"]

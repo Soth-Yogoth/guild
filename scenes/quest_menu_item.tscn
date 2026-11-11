@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://381bmg0cmj7v"]
+
+[ext_resource type="Script" uid="uid://dwussc7rmtjad" path="res://scripts/quest_menu_item.gd" id="1_qmhcs"]
+
+[node name="Control" type="Control" unique_id=833948027]
+custom_minimum_size = Vector2(0, 120)
+custom_maximum_size = Vector2(-1, 120)
+layout_mode = 3
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+script = ExtResource("1_qmhcs")
+
+[node name="Panel" type="Panel" parent="." unique_id=539521261]
+custom_minimum_size = Vector2(0, 120)
+custom_maximum_size = Vector2(-1, 120)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=680696775]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer" unique_id=2103381684]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="ColorRect" type="ColorRect" parent="Panel/MarginContainer/HBoxContainer" unique_id=101668129]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer" unique_id=395125021]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleLabel" type="RichTextLabel" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=1716488532]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+text = "Картельные сговоры не допускают ситуации, при которой реплицированные с зарубежных источников, современные исследования призывают нас к новым свершениям, которые, в свою очередь, должны быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Противоположная точка зрения подразумевает, что стремящиеся вытеснить традиционное производство, нанотехнологии призывают нас к новым свершениям, которые, в свою очередь, должны быть ассоциативно распределены по отраслям. Банальные, но неопровержимые выводы, а также сторонники тоталитаризма в науке функционально разнесены на независимые элементы."
+scroll_active = false
+scroll_following = true
+autowrap_mode = 0
+autowrap_trim_flags = 0
+visible_characters = 60
+visible_ratio = 0.0955414
+
+[node name="ContentLabel" type="RichTextLabel" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=897726990]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 70)
+custom_maximum_size = Vector2(-1, 70)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 12
+text = "Картельные сговоры не допускают ситуации, при которой реплицированные с зарубежных источников, современные исследования призывают нас к новым свершениям, которые, в свою очередь, должны быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Противоположная точка зрения подразумевает, что стремящиеся вытеснить традиционное производство, нанотехнологии призывают нас к новым свершениям, которые, в свою очередь, должны быть ассоциативно распределены по отраслям. Банальные, но неопровержимые выводы, а также сторонники тоталитаризма в науке функционально разнесены на независимые элементы."
+scroll_active = false
+visible_characters = 150
+visible_characters_behavior = 1
+visible_ratio = 0.2388535
+
+[node name="DeadlineLabel" type="RichTextLabel" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer" unique_id=788075980]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 12)
+custom_maximum_size = Vector2(-1, 12)
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 10
+text = "Картельные сговоры не допускают ситуации, при которой реплицированные с зарубежных источников, современные исследования призывают нас к новым свершениям, которые, в свою очередь, должны быть превращены в посмешище, хотя само их существование приносит несомненную пользу обществу. Противоположная точка зрения подразумевает, что стремящиеся вытеснить традиционное производство, нанотехнологии призывают нас к новым свершениям, которые, в свою очередь, должны быть ассоциативно распределены по отраслям. Банальные, но неопровержимые выводы, а также сторонники тоталитаризма в науке функционально разнесены на независимые элементы."
+scroll_active = false
+visible_characters = 60
+visible_ratio = 0.0955414

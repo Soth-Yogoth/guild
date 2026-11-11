@@ -1,0 +1,37 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="guild"
+run/main_scene="uid://8e74mvklo0hn"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*uid://coy8o7ijjj1wx"
+QuestManager="*uid://cu3x8fjifv1f3"
+UiManager="*uid://cw6xgetwyhusd"
+GameState="*uid://1waaqjuv8hr5"
+
+[dotnet]
+
+project/assembly_name="guild"
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
