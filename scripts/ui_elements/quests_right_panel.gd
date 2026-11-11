@@ -11,7 +11,6 @@ func _ready() -> void:
 	for quest in quests:
 		add_quest(quest)
 		
-
 func add_quest(quest) -> void:
 	
 	var quest_menu_item := quest_menu_item_scene.instantiate() as QuestMenuItem

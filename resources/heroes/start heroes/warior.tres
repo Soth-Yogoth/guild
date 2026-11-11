@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="HeroData" format=3 uid="uid://dvhsg0o8pg2vh"]
+
+[ext_resource type="Script" uid="uid://dq5rnd3xwvu0m" path="res://scripts/resources/hero_data.gd" id="1_ljxfa"]
+
+[resource]
+script = ExtResource("1_ljxfa")
+name = "Годвин"
+atk = 4
+luck = 2
+metadata/_custom_type_script = "uid://dq5rnd3xwvu0m"

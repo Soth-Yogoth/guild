@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="HeroDatabase" format=3 uid="uid://d3rpyeee57kbj"]
+
+[ext_resource type="Script" uid="uid://dq5rnd3xwvu0m" path="res://scripts/resources/hero_data.gd" id="1_d4ia0"]
+[ext_resource type="Resource" uid="uid://dvhsg0o8pg2vh" path="res://resources/heroes/start heroes/warior.tres" id="2_bkojb"]
+[ext_resource type="Resource" uid="uid://7i6a1i5iovix" path="res://resources/heroes/start heroes/wizard.tres" id="3_7l7ef"]
+[ext_resource type="Resource" uid="uid://di1wg53tssa1b" path="res://resources/heroes/start heroes/lucky.tres" id="4_vubf1"]
+[ext_resource type="Script" uid="uid://t2qfm3ujgjbg" path="res://scripts/resources/hero_database.gd" id="5_6gqdw"]
+
+[resource]
+script = ExtResource("5_6gqdw")
+heroes = Array[ExtResource("1_d4ia0")]([ExtResource("2_bkojb"), ExtResource("3_7l7ef"), ExtResource("4_vubf1")])
+metadata/_custom_type_script = "uid://t2qfm3ujgjbg"

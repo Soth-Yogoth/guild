@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="HeroData" format=3 uid="uid://di1wg53tssa1b"]
+
+[ext_resource type="Script" uid="uid://dq5rnd3xwvu0m" path="res://scripts/resources/hero_data.gd" id="1_j0nva"]
+
+[resource]
+script = ExtResource("1_j0nva")
+name = "Лаки"
+hp_max = 6
+atk = 2
+luck = 6
+metadata/_custom_type_script = "uid://dq5rnd3xwvu0m"

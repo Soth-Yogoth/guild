@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cko4e51p2i601"]
 
 [ext_resource type="Script" uid="uid://lmjurdqjp1lw" path="res://scripts/ui_elements/quest_info.gd" id="1_n67l7"]
-[ext_resource type="Script" uid="uid://cmu7r51c4em87" path="res://scripts/quest_content.gd" id="2_b4ff3"]
+[ext_resource type="Script" uid="uid://cmu7r51c4em87" path="res://scripts/ui_elements/quest_content.gd" id="2_b4ff3"]
 [ext_resource type="Texture2D" uid="uid://dw4l6xj473cve" path="res://assets/img/buttons/green_button_free.png" id="3_71ycc"]
 [ext_resource type="Texture2D" uid="uid://bs2lwxox2ssa5" path="res://assets/img/buttons/green_button_presed.png" id="4_0nekr"]
 [ext_resource type="Texture2D" uid="uid://dar5mgg8nwyvy" path="res://assets/img/buttons/red_button_free.png" id="5_yg53y"]

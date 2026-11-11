@@ -21,6 +21,12 @@ GameManager="*uid://coy8o7ijjj1wx"
 QuestManager="*uid://cu3x8fjifv1f3"
 UiManager="*uid://cw6xgetwyhusd"
 GameState="*uid://1waaqjuv8hr5"
+HeroManager="*uid://c6omndkt1pffl"
+
+[display]
+
+window/size/viewport_width=1600
+window/size/viewport_height=900
 
 [dotnet]
 

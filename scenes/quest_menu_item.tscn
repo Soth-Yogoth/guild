@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://381bmg0cmj7v"]
 
-[ext_resource type="Script" uid="uid://dwussc7rmtjad" path="res://scripts/quest_menu_item.gd" id="1_qmhcs"]
+[ext_resource type="Script" uid="uid://dwussc7rmtjad" path="res://scripts/ui_elements/quest_menu_item.gd" id="1_qmhcs"]
 
 [node name="Control" type="Control" unique_id=833948027]
 custom_minimum_size = Vector2(0, 120)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cw27eml1ptyk"]
 
-[ext_resource type="Script" uid="uid://cworirxe11ulf" path="res://scripts/active_quests_view.gd" id="1_6q7n1"]
+[ext_resource type="Script" uid="uid://cworirxe11ulf" path="res://scripts/ui_elements/quests_right_panel.gd" id="1_6q7n1"]
 
 [node name="Control" type="Control" unique_id=1910572543]
 custom_minimum_size = Vector2(300, 0)
@@ -17,15 +17,12 @@ script = ExtResource("1_6q7n1")
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=738057865]
 custom_minimum_size = Vector2(300, 600)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -300.0
-offset_right = 150.0
-offset_bottom = 300.0
+anchor_bottom = 1.0
+offset_left = -10.0
+offset_right = 10.0
 grow_horizontal = 2
 grow_vertical = 2
 
