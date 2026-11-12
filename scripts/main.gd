@@ -32,7 +32,6 @@ func _on_quest_declined() -> void:
 func try_update_quest_view() -> bool:
 	
 	quest = QuestManager.take_available()
-	print("update info: ", quest)
 	if quest == null: return false
 	
 	quest_view.fill(quest)

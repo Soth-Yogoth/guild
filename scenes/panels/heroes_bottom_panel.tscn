@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b2x84yplhk7ui"]
 
-[ext_resource type="PackedScene" uid="uid://bsork0adkuki1" path="res://scenes/hero_view_short.tscn" id="1_qumul"]
+[ext_resource type="PackedScene" uid="uid://bsork0adkuki1" path="res://scenes/preview/hero_preview.tscn" id="1_qumul"]
 [ext_resource type="Script" uid="uid://bqixoal0jq8lh" path="res://scripts/ui_elements/heroes_bottom_panel.gd" id="1_u2lfh"]
 
 [node name="Control" type="Control" unique_id=1536724190]

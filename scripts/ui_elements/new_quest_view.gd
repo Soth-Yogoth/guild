@@ -16,6 +16,5 @@ func fill(quest: Quest) -> void:
 func _on_accept() -> void:
 	quest_accepted.emit()
 
-
 func _on_decline() -> void:
 	quest_declined.emit()

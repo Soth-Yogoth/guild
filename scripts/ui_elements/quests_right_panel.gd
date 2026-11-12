@@ -1,7 +1,7 @@
 extends Control
 
 @onready var container := %QuestItemsContainer
-const quest_menu_item_scene := preload("res://scenes/quest_menu_item.tscn")
+const quest_menu_item_scene := preload("res://scenes/preview/quest_preview.tscn")
 
 func _ready() -> void:
 	
@@ -13,7 +13,7 @@ func _ready() -> void:
 		
 func add_quest(quest) -> void:
 	
-	var quest_menu_item := quest_menu_item_scene.instantiate() as QuestMenuItem
+	var quest_preview := quest_menu_item_scene.instantiate() as QuestPreview
 	
-	container.add_child(quest_menu_item)
-	quest_menu_item.fill(quest)
+	container.add_child(quest_preview)
+	quest_preview.fill(quest)

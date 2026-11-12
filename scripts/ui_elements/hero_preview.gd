@@ -1,4 +1,4 @@
-class_name HeroView extends Control
+class_name HeroPreview extends Control
 
 @onready var name_label := %NameLabel
 
@@ -19,6 +19,8 @@ func make_connection(hero_data: Hero) -> void:
 	
 	
 func fill(hero_data: Hero) -> void:
+	
+	name_label.text = hero_data.name
 	
 	hp_bar.value = hero_data.hp_current
 	atk_bar.value = hero_data.atk

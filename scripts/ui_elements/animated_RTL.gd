@@ -23,6 +23,3 @@ func finish_animation() -> void:
 	
 func hide_text() -> void:
 	visible_ratio = 0.0
-
-func _on_meta_clicked(meta: Variant) -> void:
-	print("clciked on text rich")

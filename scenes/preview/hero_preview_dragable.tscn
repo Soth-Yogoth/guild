@@ -1,20 +1,20 @@
-[gd_scene format=3 uid="uid://bsork0adkuki1"]
+[gd_scene format=3 uid="uid://b5fp7pjch34rm"]
 
-[ext_resource type="Texture2D" uid="uid://blhhjopqmn830" path="res://assets/img/icons/heart.png" id="1_725ej"]
-[ext_resource type="Script" uid="uid://c0swcb3jvb0ay" path="res://scripts/ui_elements/hero_view_short.gd" id="1_wh44r"]
-[ext_resource type="Texture2D" uid="uid://c6wxfpxywct4t" path="res://assets/img/progress_bar/progress_bar_background.png" id="2_wh44r"]
-[ext_resource type="Texture2D" uid="uid://bco5y2e2br0g3" path="res://assets/img/progress_bar/progress_bar_dark_pink.png" id="3_lgiyx"]
-[ext_resource type="Texture2D" uid="uid://bp6hqnso3g87m" path="res://assets/img/icons/sword.png" id="4_3vuo4"]
-[ext_resource type="Texture2D" uid="uid://cj1ihgwurutwh" path="res://assets/img/progress_bar/progress_bar_gold.png" id="5_7s46m"]
-[ext_resource type="Texture2D" uid="uid://cbpdw7mimnb4d" path="res://assets/img/icons/clover.png" id="6_xxr06"]
-[ext_resource type="Texture2D" uid="uid://bou07nd1ocv4x" path="res://assets/img/progress_bar/progress_bar_green.png" id="7_xqcdk"]
+[ext_resource type="Script" uid="uid://c0swcb3jvb0ay" path="res://scripts/ui_elements/hero_preview.gd" id="1_7chtb"]
+[ext_resource type="Texture2D" uid="uid://blhhjopqmn830" path="res://assets/img/icons/heart.png" id="2_gi4ve"]
+[ext_resource type="Texture2D" uid="uid://c6wxfpxywct4t" path="res://assets/img/progress_bar/progress_bar_background.png" id="3_57k4p"]
+[ext_resource type="Texture2D" uid="uid://bco5y2e2br0g3" path="res://assets/img/progress_bar/progress_bar_dark_pink.png" id="4_v5u7i"]
+[ext_resource type="Texture2D" uid="uid://bp6hqnso3g87m" path="res://assets/img/icons/sword.png" id="5_51mil"]
+[ext_resource type="Texture2D" uid="uid://cj1ihgwurutwh" path="res://assets/img/progress_bar/progress_bar_gold.png" id="6_nxrqq"]
+[ext_resource type="Texture2D" uid="uid://cbpdw7mimnb4d" path="res://assets/img/icons/clover.png" id="7_57axd"]
+[ext_resource type="Texture2D" uid="uid://bou07nd1ocv4x" path="res://assets/img/progress_bar/progress_bar_green.png" id="8_3fcwh"]
 
 [node name="Control" type="Control" unique_id=1103368489]
 custom_minimum_size = Vector2(150, 0)
 custom_maximum_size = Vector2(150, -1)
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_wh44r")
+script = ExtResource("1_7chtb")
 
 [node name="Panel" type="Panel" parent="." unique_id=270518231]
 layout_mode = 1
@@ -62,7 +62,7 @@ theme_override_constants/separation = 4
 [node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1581667895]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
-texture = ExtResource("1_725ej")
+texture = ExtResource("2_gi4ve")
 expand_mode = 1
 
 [node name="HP_ProgressBar" type="TextureProgressBar" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1954818854]
@@ -76,8 +76,8 @@ size_flags_vertical = 4
 max_value = 8.0
 value = 3.0
 nine_patch_stretch = true
-texture_under = ExtResource("2_wh44r")
-texture_progress = ExtResource("3_lgiyx")
+texture_under = ExtResource("3_57k4p")
+texture_progress = ExtResource("4_v5u7i")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=542870069]
 layout_mode = 2
@@ -86,7 +86,7 @@ theme_override_constants/separation = 4
 [node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1553492875]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
-texture = ExtResource("4_3vuo4")
+texture = ExtResource("5_51mil")
 expand_mode = 1
 
 [node name="ATK_ProgressBar" type="TextureProgressBar" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1551694558]
@@ -100,8 +100,8 @@ size_flags_vertical = 4
 max_value = 8.0
 value = 3.0
 nine_patch_stretch = true
-texture_under = ExtResource("2_wh44r")
-texture_progress = ExtResource("5_7s46m")
+texture_under = ExtResource("3_57k4p")
+texture_progress = ExtResource("6_nxrqq")
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1013870299]
 layout_mode = 2
@@ -110,7 +110,7 @@ theme_override_constants/separation = 4
 [node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=830338648]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 2
-texture = ExtResource("6_xxr06")
+texture = ExtResource("7_57axd")
 expand_mode = 1
 
 [node name="Luck_ProgressBar" type="TextureProgressBar" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer3" unique_id=1965998990]
@@ -124,5 +124,5 @@ size_flags_vertical = 4
 max_value = 8.0
 value = 3.0
 nine_patch_stretch = true
-texture_under = ExtResource("2_wh44r")
-texture_progress = ExtResource("7_xqcdk")
+texture_under = ExtResource("3_57k4p")
+texture_progress = ExtResource("8_3fcwh")
