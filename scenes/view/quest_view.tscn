@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dj6hc8wdf286h"]
 
 [ext_resource type="Texture2D" uid="uid://dar5mgg8nwyvy" path="res://assets/img/buttons/red_button_free.png" id="1_2y6wd"]
-[ext_resource type="Script" uid="uid://bqi6oerm1erat" path="res://scripts/ui_elements/quest_view_full.gd" id="1_3dyku"]
+[ext_resource type="Script" uid="uid://bqi6oerm1erat" path="res://scripts/ui_elements/quest_view/quest_view_full.gd" id="1_3dyku"]
 [ext_resource type="Texture2D" uid="uid://dtkt2vs0cn5ah" path="res://assets/img/buttons/red_button_presed.png" id="2_gonro"]
+[ext_resource type="PackedScene" uid="uid://kw05h2cjepgv" path="res://scenes/preview/hero_preview_empty.tscn" id="4_c5el2"]
 
 [node name="Control" type="Control" unique_id=426591111]
 layout_mode = 3
@@ -11,12 +12,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 mouse_filter = 1
 script = ExtResource("1_3dyku")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1485259320]
+propagate_maximum_size = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -64,6 +64,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2143992375]
+clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
 mouse_filter = 2
@@ -85,7 +86,7 @@ unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 1
 theme_override_font_sizes/normal_font_size = 24
-text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium, risus ac ornare auctor, massa neque mattis ligula, in mattis ex risus a lacus. Praesent gravida scelerisque dolor id finibus. Sed fringilla dolor quis ullamcorper placerat. Nunc ac erat ut dui hendrerit dictum id id est. Pellentesque pulvinar ut est id varius. Integer finibus libero a ipsum vulputate eleifend. Suspendisse et mollis nibh. Pellentesque turpis tellus, aliquet non porttitor sit amet, venenatis a enim. Morbi sodales dui commodo eros ornare, sit amet maximus elit fringilla. Aliquam pretium cursus metus, non sodales augue iaculis consectetur. Fusce suscipit lectus vitae imperdiet dignissim. Nunc laoreet libero eu ex finibus rhoncus. Nam luctus euismod mauris, a imperdiet velit ornare in. Nullam venenatis turpis maximus eros dapibus accumsan. "
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium, risus ac ornare auctor, massa neque mattis ligula, in mattis ex risus a lacus. Praesent gravida scelerisque dolor id finibus. Sed fringilla dolor quis ullamcorper placerat. Nunc ac erat ut dui hendrerit dictum id id est. Pellentesque pulvinar ut est id varius. Integer finibus libero a ipsum vulputate eleifend. Suspendisse et mollis nibh. Pellentesque turpis tellus, aliquet non porttitor sit amet, venenatis a enim. Morbi sodales dui commodo eros ornare, sit amet maximus elit fringilla. Aliquam pretium cursus metus, non sodales augue iaculis consectetur. Fusce suscipit lectus vitae imperdiet dignissim. Nunc laoreet libero eu ex finibus rhoncus. "
 fit_content = true
 
 [node name="DeadlineLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=387258861]
@@ -97,39 +98,24 @@ fit_content = true
 autowrap_mode = 0
 
 [node name="VBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1249766651]
-custom_minimum_size = Vector2(0, 180)
-custom_maximum_size = Vector2(-1, 180)
+custom_minimum_size = Vector2(0, 200)
+custom_maximum_size = Vector2(-1, 200)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="PanelContainer" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1571415714]
-custom_minimum_size = Vector2(120, 0)
-custom_maximum_size = Vector2(120, -1)
+[node name="EmptyHeroPreview" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=2110942247 instance=ExtResource("4_c5el2")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
+mouse_filter = 1
 
-[node name="PanelContainer2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=998970774]
-custom_minimum_size = Vector2(120, 0)
-custom_maximum_size = Vector2(120, -1)
+[node name="EmptyHeroPreview2" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=968236914 instance=ExtResource("4_c5el2")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
-[node name="PanelContainer3" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1422613579]
-custom_minimum_size = Vector2(120, 0)
-custom_maximum_size = Vector2(120, -1)
+[node name="EmptyHeroPreview3" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=608489903 instance=ExtResource("4_c5el2")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
-[node name="PanelContainer4" type="PanelContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=1351102075]
-custom_minimum_size = Vector2(120, 0)
-custom_maximum_size = Vector2(120, -1)
+[node name="EmptyHeroPreview4" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=347638803 instance=ExtResource("4_c5el2")]
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_close_button_pressed"]

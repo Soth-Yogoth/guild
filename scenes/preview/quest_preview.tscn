@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://381bmg0cmj7v"]
 
-[ext_resource type="Script" uid="uid://dwussc7rmtjad" path="res://scripts/ui_elements/quest_preview.gd" id="1_b47ij"]
+[ext_resource type="Script" uid="uid://dwussc7rmtjad" path="res://scripts/ui_elements/quest_view/quest_preview.gd" id="1_b47ij"]
 
 [node name="Control" type="Control" unique_id=833948027]
 custom_minimum_size = Vector2(0, 120)
@@ -107,5 +107,3 @@ text = "Картельные сговоры не допускают ситуац
 scroll_active = false
 visible_characters = 60
 visible_ratio = 0.0955414
-
-[connection signal="gui_input" from="." to="." method="_on_gui_input"]

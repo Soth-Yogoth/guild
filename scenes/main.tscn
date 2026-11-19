@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://8e74mvklo0hn"]
 
 [ext_resource type="Script" uid="uid://c7lwe2e0kn5pd" path="res://scripts/main.gd" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://cko4e51p2i601" path="res://scenes/view/new_quest_view.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://mih5m0vif8pt" path="res://scenes/view/new_quest_view.tscn" id="2_0wfyh"]
+[ext_resource type="Texture2D" uid="uid://dqvhftssnynyn" path="res://assets/img/icons/coin.png" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dj6hc8wdf286h" path="res://scenes/view/quest_view.tscn" id="2_tbgi4"]
 [ext_resource type="Script" uid="uid://cnt7d63unuyw3" path="res://scripts/ui_elements/main_area.gd" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://cw27eml1ptyk" path="res://scenes/panels/quests_right_panel.tscn" id="3_sugp2"]
@@ -26,6 +27,7 @@ grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1468064666]
 layout_mode = 2
+theme_override_constants/separation = 100
 alignment = 1
 
 [node name="StartDayButton" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=13250773]
@@ -33,6 +35,21 @@ unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 40)
 layout_mode = 2
 text = "Начать день"
+
+[node name="Container" type="HBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1848785024]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/Container" unique_id=1600808240]
+layout_mode = 2
+texture = ExtResource("2_o6xl0")
+expand_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="VBoxContainer/HBoxContainer/Container" unique_id=64160716]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 28
+text = ": 0"
+fit_content = true
+autowrap_mode = 0
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer" unique_id=1392180215]
 layout_mode = 2
@@ -43,46 +60,25 @@ layout_mode = 2
 size_flags_horizontal = 3
 script = ExtResource("2_tefeu")
 
-[node name="NewQuestViewContainer" type="MarginContainer" parent="VBoxContainer/HBoxContainer2/MainArea" unique_id=882112061]
+[node name="NewQuestView" parent="VBoxContainer/HBoxContainer2/MainArea" unique_id=122900152 instance=ExtResource("2_0wfyh")]
 unique_name_in_owner = true
-layout_mode = 0
-offset_left = 4.0
-offset_right = 1296.0
-offset_bottom = 652.0
-size_flags_horizontal = 3
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="NewQuestView" parent="VBoxContainer/HBoxContainer2/MainArea/NewQuestViewContainer" unique_id=1260343331 instance=ExtResource("2_0wfyh")]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 4
+layout_mode = 1
+mouse_filter = 1
 
 [node name="QuestView" parent="VBoxContainer/HBoxContainer2/MainArea" unique_id=426591111 instance=ExtResource("2_tbgi4")]
 unique_name_in_owner = true
 visible = false
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_right = 1296.0
-offset_bottom = 652.0
-grow_horizontal = 1
-grow_vertical = 1
+layout_mode = 1
 
 [node name="AcceptedQuestsList" parent="VBoxContainer/HBoxContainer2" unique_id=1910572543 instance=ExtResource("3_sugp2")]
 unique_name_in_owner = true
 layout_mode = 2
+size_flags_vertical = 1
 
-[node name="Control" parent="VBoxContainer" unique_id=1536724190 instance=ExtResource("4_jyhfs")]
-custom_minimum_size = Vector2(0, 200)
+[node name="HeroPanel" parent="VBoxContainer" unique_id=1536724190 instance=ExtResource("4_jyhfs")]
+custom_minimum_size = Vector2(0, 240)
 layout_mode = 2
 size_flags_vertical = 8
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/StartDayButton" to="." method="_on_button_pressed"]
-[connection signal="quest_accepted" from="VBoxContainer/HBoxContainer2/MainArea/NewQuestViewContainer/NewQuestView" to="." method="_on_quest_accepted"]
-[connection signal="quest_declined" from="VBoxContainer/HBoxContainer2/MainArea/NewQuestViewContainer/NewQuestView" to="." method="_on_quest_declined"]
-[connection signal="on_close_button_pressed" from="VBoxContainer/HBoxContainer2/MainArea/QuestView" to="VBoxContainer/HBoxContainer2/MainArea" method="_on_quest_view_close_button_pressed"]
+[connection signal="on_close_button_pressed" from="VBoxContainer/HBoxContainer2/MainArea/QuestView" to="VBoxContainer/HBoxContainer2/MainArea" method="_on_quest_info_closed"]

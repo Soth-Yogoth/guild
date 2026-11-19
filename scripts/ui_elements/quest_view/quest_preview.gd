@@ -9,7 +9,7 @@ func _ready() -> void:
 		
 func _get_drag_data(pos) -> Variant:
 	
-	var preview_dragable_instance := preview_dragable_scene.instantiate()
+	var preview_dragable_instance := preview_dragable_scene.instantiate() as QuestPreviewDragged
 	set_drag_preview(preview_dragable_instance)
 	preview_dragable_instance.fill(quest)
 	

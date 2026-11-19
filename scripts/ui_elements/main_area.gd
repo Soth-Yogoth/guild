@@ -1,23 +1,19 @@
 extends Control
 
-@onready var quest_view := %QuestView as QuestView
-@onready var new_quest_view := %NewQuestViewContainer
+@onready var quest_info_panel := %QuestView as QuestView
+@onready var new_quest_info_panel := %NewQuestView
 
 func _can_drop_data(pos, data) -> bool:
-	print("can_drop")
+
 	return data is Quest
 	
 func _drop_data(pos, data) -> void:
 	
-	print("drop_start")
-	
-	new_quest_view.hide()
-	quest_view.show()
-	quest_view.fill(data)
-	
-	print("drop_end")
+	new_quest_info_panel.hide()
+	quest_info_panel.show()
+	quest_info_panel.fill(data)
 
-func _on_quest_view_close_button_pressed() -> void:
+func _on_quest_info_closed() -> void:
 	
-	quest_view.hide()
-	new_quest_view.show()
+	quest_info_panel.hide()
+	new_quest_info_panel.show()

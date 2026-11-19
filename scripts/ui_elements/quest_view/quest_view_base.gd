@@ -8,6 +8,10 @@ var quest : Quest
 
 func fill(quest: Quest) -> void:
 	
+	if quest == null:
+		print("quest is null")
+		return
+	
 	self.quest = quest
 	
 	title_label.text = quest.title

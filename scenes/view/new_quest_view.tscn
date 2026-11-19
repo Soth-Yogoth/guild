@@ -1,99 +1,77 @@
-[gd_scene format=3 uid="uid://cko4e51p2i601"]
+[gd_scene format=3 uid="uid://mih5m0vif8pt"]
 
-[ext_resource type="Script" uid="uid://lmjurdqjp1lw" path="res://scripts/ui_elements/new_quest_view.gd" id="1_n67l7"]
-[ext_resource type="Script" uid="uid://cmu7r51c4em87" path="res://scripts/ui_elements/animated_RTL.gd" id="2_b4ff3"]
-[ext_resource type="Texture2D" uid="uid://dw4l6xj473cve" path="res://assets/img/buttons/green_button_free.png" id="3_71ycc"]
-[ext_resource type="Texture2D" uid="uid://bs2lwxox2ssa5" path="res://assets/img/buttons/green_button_presed.png" id="4_0nekr"]
-[ext_resource type="Texture2D" uid="uid://dar5mgg8nwyvy" path="res://assets/img/buttons/red_button_free.png" id="5_yg53y"]
-[ext_resource type="Texture2D" uid="uid://dtkt2vs0cn5ah" path="res://assets/img/buttons/red_button_presed.png" id="6_uljhd"]
+[ext_resource type="Script" uid="uid://bxn5lwpof2s6i" path="res://scripts/ui_elements/quest_view/new_quest_view.gd" id="1_jgdru"]
+[ext_resource type="PackedScene" uid="uid://cko4e51p2i601" path="res://scenes/panels/new_quest_info_panel.tscn" id="1_lvy1q"]
+[ext_resource type="Texture2D" uid="uid://cdoigk6qlpv81" path="res://assets/img/person/person_placeholder9.png" id="2_jgdru"]
+[ext_resource type="Texture2D" uid="uid://cktldtsflvi3o" path="res://assets/img/person/person_placeholder0.png" id="2_n3hh4"]
+[ext_resource type="Texture2D" uid="uid://31boswopau1j" path="res://assets/img/person/person_placeholder1.png" id="3_6cocr"]
 
-[node name="QuestInfo" type="PanelContainer" unique_id=1260343331]
-self_modulate = Color(3.9777355, 2.6733465, 1.8432809, 1)
-custom_minimum_size = Vector2(400, 400)
-custom_maximum_size = Vector2(400, 400)
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_asl68"]
+frames = 6
+speed_scale = 0.6
+frame_0/texture = ExtResource("3_6cocr")
+frame_0/duration = 0.2
+frame_1/texture = ExtResource("2_jgdru")
+frame_1/duration = 0.2
+frame_2/texture = ExtResource("2_n3hh4")
+frame_2/duration = 0.2
+frame_3/texture = ExtResource("2_jgdru")
+frame_3/duration = 0.25
+frame_4/texture = ExtResource("3_6cocr")
+frame_4/duration = 0.25
+frame_5/texture = ExtResource("2_n3hh4")
+frame_5/duration = 0.2
+
+[node name="NewQuestView" type="Control" unique_id=1362477642]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 1
-script = ExtResource("1_n67l7")
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_jgdru")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1196426592]
-layout_mode = 2
+[node name="Person" type="TextureRect" parent="." unique_id=618650937]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 400)
+custom_maximum_size = Vector2(600, 600)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -400.0
+offset_top = -400.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = SubResource("AnimatedTexture_asl68")
+expand_mode = 2
+stretch_mode = 4
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=893464570]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=1971993893]
-layout_mode = 2
-theme_override_constants/separation = 10
-alignment = 1
-
-[node name="Title" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1872230333]
+[node name="NewQuestInfoPanel" parent="MarginContainer" unique_id=1260343331 instance=ExtResource("1_lvy1q")]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-mouse_filter = 1
-theme_override_font_sizes/normal_font_size = 24
-text = "Название"
-fit_content = true
-scroll_active = false
 
-[node name="QuestContent" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1274436889]
-custom_minimum_size = Vector2(0, 200)
-layout_mode = 2
-mouse_filter = 1
-text = "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-"
-script = ExtResource("2_b4ff3")
-
-[node name="Deadline" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1150525762]
-layout_mode = 2
-mouse_filter = 2
-text = "Срок: 3 дня"
-fit_content = true
-scroll_active = false
-
-[node name="RewardText" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=1328440553]
-layout_mode = 2
-mouse_filter = 2
-text = "Вознаграждение: 100 (предоплата 20%)"
-fit_content = true
-scroll_active = false
-
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=718191301]
-layout_mode = 2
-theme_override_constants/separation = 20
-alignment = 2
-
-[node name="Button" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=22698983]
-texture_filter = 1
-custom_minimum_size = Vector2(64, 24)
-layout_mode = 2
-mouse_filter = 1
-texture_normal = ExtResource("3_71ycc")
-texture_pressed = ExtResource("4_0nekr")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Button2" type="TextureButton" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=782772614]
-texture_filter = 1
-custom_minimum_size = Vector2(64, 24)
-layout_mode = 2
-mouse_filter = 1
-texture_normal = ExtResource("5_yg53y")
-texture_pressed = ExtResource("6_uljhd")
-ignore_texture_size = true
-stretch_mode = 0
-
-[connection signal="meta_clicked" from="MarginContainer/VBoxContainer/QuestContent" to="MarginContainer/VBoxContainer/QuestContent" method="_on_meta_clicked"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Button" to="." method="_on_accept"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/HBoxContainer/Button2" to="." method="_on_decline"]
+[connection signal="quest_accepted" from="MarginContainer/NewQuestInfoPanel" to="." method="_on_quest_answered"]
+[connection signal="quest_declined" from="MarginContainer/NewQuestInfoPanel" to="." method="_on_quest_answered"]

@@ -19,7 +19,8 @@ func update_available_quests(count: int) -> void:
 	available_quests.clear()
 	
 	for i in range(count):
-		available_quests.append(generate_quest())
+		available_quests.append(Quest.new(quest_database.quests[i]))
+	available_quests.shuffle()
 		
 func take_available() -> Quest:
 	return available_quests.pop_back()

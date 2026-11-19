@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://kw05h2cjepgv"]
+
+[ext_resource type="Script" uid="uid://dv4nnpvtbwm6" path="res://scripts/ui_elements/hero_view/hero_preview_empty.gd" id="1_mhna3"]
+[ext_resource type="PackedScene" uid="uid://bsork0adkuki1" path="res://scenes/preview/hero_preview.tscn" id="2_yfwk3"]
+
+[node name="Control" type="Control" unique_id=2110942247]
+custom_minimum_size = Vector2(150, 200)
+custom_maximum_size = Vector2(150, 200)
+layout_mode = 3
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mhna3")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1765295581]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="HeroPreview" parent="." unique_id=1103368489 instance=ExtResource("2_yfwk3")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_right = 150.0
+offset_bottom = 200.0
+
+[connection signal="close_button_pressed" from="HeroPreview" to="." method="_on_hero_preview_close_button_pressed"]
+[connection signal="drag_lose" from="HeroPreview" to="." method="_on_hero_preview_drag_lose"]
+[connection signal="dragged" from="HeroPreview" to="." method="_on_hero_preview_dragged"]
