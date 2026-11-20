@@ -31,13 +31,11 @@ func clear_container() -> void:
 		
 func on_hero_preview_drag(hero_preview : HeroPreview) -> void:
 	
-	hero_preview.modulate = Color.DIM_GRAY
-	hero_preview.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	hero_preview.lock()
 	
 func on_hero_preview_lose_drag(hero_preview : HeroPreview) -> void:
 	
-	hero_preview.modulate = Color.WHITE
-	hero_preview.mouse_filter = Control.MOUSE_FILTER_STOP
+	hero_preview.unlock()
  
 func return_hero(hero : Hero) -> void:
 	

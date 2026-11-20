@@ -42,9 +42,20 @@ func _get_drag_data(pos) -> Variant:
 	return hero
 	
 func _notification(what: int) -> void:
+	
 	if what == NOTIFICATION_DRAG_END:
 		if not is_drag_successful() && is_dragged:
 			drag_lose.emit(self)
 			
 		is_dragged = false
+		
+func lock() -> void:
+	
+	modulate = Color.DIM_GRAY
+	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	
+func unlock() -> void:
+	
+	modulate = Color.WHITE
+	mouse_filter = Control.MOUSE_FILTER_STOP
 	

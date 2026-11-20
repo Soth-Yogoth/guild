@@ -1,11 +1,13 @@
 class_name Hero
 
+static var lastID := 0
+
 signal max_hp_value_changed(value: int)
 signal current_hp_value_changed(value: int)
 signal atk_value_changed(value: int)
 signal luck_value_changed(value: int)
 
-var id: String
+var id: int
 var name: String = "nobody"
 
 var hp_max: int 
@@ -25,6 +27,9 @@ var luck: int :
 		luck_value_changed.emit(value)
 
 func _init() -> void:
+	
+	id = lastID
+	lastID += 1
 	
 	hp_max = randi_range(6, 8)
 	hp_current = hp_max

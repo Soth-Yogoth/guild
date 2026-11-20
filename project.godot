@@ -22,6 +22,7 @@ QuestManager="*uid://cu3x8fjifv1f3"
 UiManager="*uid://cw6xgetwyhusd"
 GameState="*uid://1waaqjuv8hr5"
 HeroManager="*uid://c6omndkt1pffl"
+QuestResolver="*uid://bh5ha1trxnep5"
 
 [display]
 

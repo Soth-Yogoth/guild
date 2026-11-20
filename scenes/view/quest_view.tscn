@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://bqi6oerm1erat" path="res://scripts/ui_elements/quest_view/quest_view_full.gd" id="1_3dyku"]
 [ext_resource type="Texture2D" uid="uid://dtkt2vs0cn5ah" path="res://assets/img/buttons/red_button_presed.png" id="2_gonro"]
 [ext_resource type="PackedScene" uid="uid://kw05h2cjepgv" path="res://scenes/preview/hero_preview_empty.tscn" id="4_c5el2"]
+[ext_resource type="Texture2D" uid="uid://dw4l6xj473cve" path="res://assets/img/buttons/green_button_free.png" id="5_aaf06"]
+[ext_resource type="Texture2D" uid="uid://bs2lwxox2ssa5" path="res://assets/img/buttons/green_button_presed.png" id="6_duem3"]
 
 [node name="Control" type="Control" unique_id=426591111]
 layout_mode = 3
@@ -34,6 +36,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2011748601]
 layout_mode = 2
+theme_override_constants/separation = 20
 
 [node name="Button" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=376685501]
 texture_filter = 1
@@ -101,21 +104,60 @@ autowrap_mode = 0
 custom_minimum_size = Vector2(0, 200)
 custom_maximum_size = Vector2(-1, 200)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_constants/separation = 200
+alignment = 1
+
+[node name="VBoxContainer3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=10520850]
+custom_minimum_size = Vector2(0, 200)
+custom_maximum_size = Vector2(-1, 200)
+layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="EmptyHeroPreview" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=2110942247 instance=ExtResource("4_c5el2")]
+[node name="EmptyHeroPreview" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer3" unique_id=2110942247 instance=ExtResource("4_c5el2")]
 layout_mode = 2
 mouse_filter = 1
 
-[node name="EmptyHeroPreview2" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=968236914 instance=ExtResource("4_c5el2")]
+[node name="EmptyHeroPreview2" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer3" unique_id=968236914 instance=ExtResource("4_c5el2")]
 layout_mode = 2
 
-[node name="EmptyHeroPreview3" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=608489903 instance=ExtResource("4_c5el2")]
+[node name="EmptyHeroPreview3" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer3" unique_id=608489903 instance=ExtResource("4_c5el2")]
 layout_mode = 2
 
-[node name="EmptyHeroPreview4" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=347638803 instance=ExtResource("4_c5el2")]
+[node name="EmptyHeroPreview4" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer3" unique_id=347638803 instance=ExtResource("4_c5el2")]
 layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=482969715]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 40
+
+[node name="ChancePreviewLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer2" unique_id=17123982]
+layout_mode = 2
+size_flags_vertical = 4
+text = "Шанс успеха: ???"
+fit_content = true
+
+[node name="StartQuestButton" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer2" unique_id=981574103]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_aaf06")
+texture_pressed = ExtResource("6_duem3")
+
+[node name="DeleteQuestButton" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer2" unique_id=1704254565]
+visible = false
+custom_minimum_size = Vector2(0, 36)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("1_2y6wd")
+texture_pressed = ExtResource("6_duem3")
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_close_button_pressed"]
