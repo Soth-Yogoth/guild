@@ -1,8 +1,5 @@
 class_name QuestHeroSlot extends Control
 
-signal hero_added(hero: Hero)
-signal hero_removed(hero: Hero)
-
 @onready var hero_preview := %HeroPreview as HeroPreview
 
 var hero: Hero
@@ -21,7 +18,7 @@ func _drop_data(pos, data) -> void:
 		source_slot._set_hero(previous_hero)
 	else:
 		_return_to_roster(previous_hero)
-		hero_added.emit(hero)
+		QuestManager.add_hero_to_party(hero)
 
 func _set_hero(new_hero: Hero) -> void:
 	
@@ -40,7 +37,7 @@ func _return_to_roster(returned_hero: Hero) -> void:
 		return
 
 	HeroManager.return_hero_into_stuck(returned_hero)
-	hero_removed.emit(returned_hero)
+	QuestManager.remove_hero_from_party(returned_hero)
 
 func return_hero_to_roster() -> void:
 	

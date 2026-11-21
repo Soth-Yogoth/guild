@@ -14,11 +14,14 @@ class_name QuestResult extends Resource
 func calculate_chance(party: Array[Hero]) -> float:
 	
 	var chance: = base_chance
+	var party_size_modifier := 1.0 if recommended_party_size.is_empty() else 0.0
 	
 	for size in recommended_party_size:
 		
-		var value = 99 - pow((size - party.size()), 2) * 10
-		chance = value if value > chance else chance
+		var value := 1.0 - pow(size - party.size(), 2) * 0.1
+		party_size_modifier = maxf(party_size_modifier, value)
+
+	chance = chance * party_size_modifier
 		
 	for requirement in requirement_skills:
 		

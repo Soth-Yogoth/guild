@@ -9,4 +9,5 @@ id = "quest_2_fail"
 title = "Часть урожая осталась на поле"
 description = "Герои не успели собрать весь урожай, но за помощь фермер всё равно выплатил половину обещанной награды."
 reward_modifier = 0.5
-recommended_party_size = Array[int]([1, 2])
+base_chance = 10.0
+recommended_party_size = Array[int]([1])

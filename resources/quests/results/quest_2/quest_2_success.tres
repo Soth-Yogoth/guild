@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="QuestResult" format=3]
+[gd_resource type="Resource" script_class="QuestResult" format=3 uid="uid://c2brreslypdfi"]
 
-[ext_resource type="Script" path="res://scripts/resources/quest/quest_result.gd" id="1_result"]
+[ext_resource type="Script" uid="uid://d1nxllvp3tcub" path="res://scripts/resources/quest/quest_result.gd" id="1_result"]
+[ext_resource type="Script" uid="uid://1mjh8vqsnqmx" path="res://scripts/resources/quest/skill_requirement.gd" id="1_snx1l"]
 
 [resource]
 script = ExtResource("1_result")
@@ -8,4 +9,5 @@ id = "quest_2_success"
 title = "Урожай собран"
 description = "Героям удалось собрать весь урожай."
 reward_modifier = 1.0
+base_chance = 10.0
 recommended_party_size = Array[int]([2, 3, 4])

@@ -1,6 +1,13 @@
 [gd_resource type="Resource" script_class="QuestResult" format=3 uid="uid://baxm7qhseq7mj"]
 
-[ext_resource type="Script" path="res://scripts/resources/quest/quest_result.gd" id="1_result"]
+[ext_resource type="Script" uid="uid://1mjh8vqsnqmx" path="res://scripts/resources/quest/skill_requirement.gd" id="1_aq542"]
+[ext_resource type="Script" uid="uid://d1nxllvp3tcub" path="res://scripts/resources/quest/quest_result.gd" id="1_result"]
+
+[sub_resource type="Resource" id="Resource_pojn4"]
+script = ExtResource("1_aq542")
+method = 0
+requirement_value = 4
+metadata/_custom_type_script = "uid://1mjh8vqsnqmx"
 
 [resource]
 script = ExtResource("1_result")
@@ -8,4 +15,6 @@ id = "quest_1_atk_success"
 title = "Хулиганы спугнуты"
 description = "Герои сидели в засаде до полуночи. Когда хулиганы объявились, герои их спугнули. Теперь хулиганы не скоро вернутся."
 reward_modifier = 1.0
+base_chance = 2.0
 recommended_party_size = Array[int]([3, 4])
+requirement_skills = Array[ExtResource("1_aq542")]([SubResource("Resource_pojn4")])

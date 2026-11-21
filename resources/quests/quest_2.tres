@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://brf0d226jrpyi" path="res://scripts/resources/quest/quest_data.gd" id="1_l3tct"]
 [ext_resource type="Script" uid="uid://d1nxllvp3tcub" path="res://scripts/resources/quest/quest_result.gd" id="2_result"]
-[ext_resource type="Resource" path="res://resources/quests/results/quest_2/quest_2_bonus_success.tres" id="3_outcome"]
-[ext_resource type="Resource" path="res://resources/quests/results/quest_2/quest_2_success.tres" id="4_outcome"]
-[ext_resource type="Resource" path="res://resources/quests/results/quest_2/quest_2_fail.tres" id="5_outcome"]
+[ext_resource type="Resource" uid="uid://bfbkorx44l15e" path="res://resources/quests/results/quest_2/quest_2_bonus_success.tres" id="3_outcome"]
+[ext_resource type="Resource" uid="uid://c2brreslypdfi" path="res://resources/quests/results/quest_2/quest_2_success.tres" id="4_outcome"]
+[ext_resource type="Resource" uid="uid://cs8vvw804lft0" path="res://resources/quests/results/quest_2/quest_2_fail.tres" id="5_outcome"]
 
 [resource]
 script = ExtResource("1_l3tct")

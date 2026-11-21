@@ -9,4 +9,5 @@ id = "quest_2_bonus_success"
 title = "Урожай собран с запасом времени"
 description = "Герои собрали весь урожай и даже помогли с другой работой на ферме. Фермер остался доволен и увеличил размер вознаграждения."
 reward_modifier = 1.5
+base_chance = 10.0
 recommended_party_size = Array[int]([4])

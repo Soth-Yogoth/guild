@@ -32,7 +32,7 @@ func add_hero_to_party(hero: Hero) -> void:
 	current_party.append(hero)
 	current_party_reorganised.emit(current_party)
 	
-func remove_hero_to_party(hero: Hero) -> void:
+func remove_hero_from_party(hero: Hero) -> void:
 	
 	current_party.erase(hero)
 	current_party_reorganised.emit(current_party)

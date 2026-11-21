@@ -14,4 +14,5 @@ id = "quest_3_success"
 title = "Крысы разбежались"
 description = "Герои одержали победу над крысами, но парочке крыс удалось скрыться. Возможно, они вернутся позже."
 reward_modifier = 1.0
+base_chance = 2.0
 requirement_skills = Array[ExtResource("2_requirement")]([SubResource("Resource_requirement_0")])

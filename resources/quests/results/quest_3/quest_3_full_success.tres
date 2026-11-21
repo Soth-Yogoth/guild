@@ -20,4 +20,5 @@ id = "quest_3_full_success"
 title = "Подвал очищен"
 description = "Герои победили всех крыс. Писк из подвала больше никому не помешает."
 reward_modifier = 1.0
+base_chance = 2.0
 requirement_skills = Array[ExtResource("2_requirement")]([SubResource("Resource_requirement_0"), SubResource("Resource_requirement_1")])

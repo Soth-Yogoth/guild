@@ -37,6 +37,6 @@ func _on_party_reorganised(party: Array[Hero]) -> void:
 	var chance = QuestResolver.calculate_success_chance(quest, party)
 	chance_preview.text = "Шанс успеха: " + str(chance) + "%"
 	
-	completion_time_preview.text = "Время выполнения: " + \
-		str(quest.completion_time) if chance > 0 else "0" + " дней."
+	var completion_time := quest.completion_time if chance > 0 else 0
+	completion_time_preview.text = "Время выполнения: %d дн." % completion_time
 	
