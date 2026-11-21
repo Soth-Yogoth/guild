@@ -20,6 +20,8 @@ func add_hero_view(hero: Hero) -> void:
 	hero_view_instance.make_connection(hero)
 	
 	hero_dictionary[hero] = hero_view_instance
+	if QuestManager.is_hero_on_mission(hero):
+		hero_view_instance.lock()
 	
 	hero_view_instance.dragged.connect(on_hero_preview_drag)
 	hero_view_instance.drag_lose.connect(on_hero_preview_lose_drag)
@@ -37,5 +39,11 @@ func on_hero_preview_lose_drag(hero_preview : HeroPreview) -> void:
 	
 	hero_preview.unlock()
  
-func return_hero(hero : Hero) -> void:
-	hero_dictionary[hero].unlock()
+func set_hero_available(hero: Hero, available: bool) -> void:
+	var preview: HeroPreview = hero_dictionary.get(hero)
+	if preview == null:
+		return
+	if available:
+		preview.unlock()
+	else:
+		preview.lock()

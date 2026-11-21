@@ -1,5 +1,7 @@
 class_name NewQuestView extends Control
 
+signal offers_exhausted
+
 @onready var new_quest_info_panel := %NewQuestInfoPanel
 @onready var person := %Person
 var quest : Quest
@@ -29,4 +31,6 @@ func try_update_quest() -> bool:
 		new_quest_info_panel.set_interactive(true)
 
 	_updating = false
+	if quest == null:
+		offers_exhausted.emit()
 	return quest != null

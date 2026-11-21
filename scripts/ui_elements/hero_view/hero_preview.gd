@@ -7,6 +7,8 @@ signal drag_lose(hero_preview : HeroPreview)
 var preview_dragged_scene := preload("res://scenes/preview/hero_preview_dragged.tscn")
 
 @onready var is_dragged := false
+@onready var remove_button: BaseButton = %RemoveHeroButton
+var drag_enabled := true
 var _click_pending := false
 
 func make_connection(hero_data: Hero) -> void:
@@ -43,6 +45,9 @@ func _gui_input(event: InputEvent) -> void:
 	
 func _get_drag_data(pos) -> Variant:
 	_click_pending = false
+	if not drag_enabled or hero == null:
+		return null
+
 	var preview_dragged_instance := preview_dragged_scene.instantiate() as HeroPreviewDragged
 	set_drag_preview(preview_dragged_instance)
 	preview_dragged_instance.fill(hero)

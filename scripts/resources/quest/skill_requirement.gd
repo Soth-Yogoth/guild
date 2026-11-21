@@ -11,6 +11,7 @@ enum Method
 {
 	SUM,
 	MIN,
+	MAX,
 	EXIST,
 	AVERAGE
 }
@@ -27,6 +28,7 @@ func calculate(skill_values: Array[int]) -> float:
 	match method:
 		Method.SUM: action = Sum
 		Method.MIN: action = Min
+		Method.MAX: action = Max
 		Method.EXIST: action = Exist
 		Method.AVERAGE: action = Average
 	
@@ -50,6 +52,17 @@ func Min(values:  Array[int]) -> float:
 		min = value if value < min else min
 	
 	var result = min - requirement_value
+	
+	return float(result)
+	
+func Max(values:  Array[int]) -> float:
+	
+	var max = values[0]
+	
+	for value in values:
+		max = value if value > max else max
+	
+	var result = max - requirement_value
 	
 	return float(result)
 

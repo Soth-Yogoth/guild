@@ -6,4 +6,5 @@ var quests_per_day := 3
 func start_new_day() -> void:
 	
 	day += 1
+	QuestManager.advance_missions()
 	QuestManager.update_available_quests(quests_per_day)

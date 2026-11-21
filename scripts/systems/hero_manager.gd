@@ -14,7 +14,8 @@ func set_hero_panel(panel : HeroPanel) -> void:
 	hero_panel = panel
 
 func return_hero_into_stuck(hero : Hero) -> void:
-	hero_panel.return_hero(hero)
-	
-func make_hero_available(hero_id : int, status : bool) -> void:
-	pass
+	make_hero_available(hero, true)
+
+func make_hero_available(hero: Hero, available: bool) -> void:
+	if is_instance_valid(hero_panel):
+		hero_panel.set_hero_available(hero, available)

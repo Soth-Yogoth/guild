@@ -27,7 +27,7 @@ func _on_quest_info_closed() -> void:
 func _show_quest(quest: Quest) -> void:
 	
 	current_workspace.hide()
-	quest_info_panel.show()
-	quest_info_panel.fill(quest)
 	QuestManager.set_current_quest(quest)
+	quest_info_panel.fill(quest)
+	quest_info_panel.show()
 	

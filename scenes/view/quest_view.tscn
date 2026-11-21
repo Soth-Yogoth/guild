@@ -92,6 +92,10 @@ theme_override_font_sizes/normal_font_size = 24
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium, risus ac ornare auctor, massa neque mattis ligula, in mattis ex risus a lacus. Praesent gravida scelerisque dolor id finibus. Sed fringilla dolor quis ullamcorper placerat. Nunc ac erat ut dui hendrerit dictum id id est. Pellentesque pulvinar ut est id varius. Integer finibus libero a ipsum vulputate eleifend. Suspendisse et mollis nibh. Pellentesque turpis tellus, aliquet non porttitor sit amet, venenatis a enim. Morbi sodales dui commodo eros ornare, sit amet maximus elit fringilla. Aliquam pretium cursus metus, non sodales augue iaculis consectetur. Fusce suscipit lectus vitae imperdiet dignissim. Nunc laoreet libero eu ex finibus rhoncus. "
 fit_content = true
 
+[node name="StatusLabel" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1697382281]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="DeadlineLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=387258861]
 unique_name_in_owner = true
 layout_mode = 2
@@ -99,6 +103,16 @@ mouse_filter = 1
 text = "f"
 fit_content = true
 autowrap_mode = 0
+
+[node name="QuestResultDescription" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1739140185]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 24
+fit_content = true
+scroll_active = false
 
 [node name="VBoxContainer2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1249766651]
 custom_minimum_size = Vector2(0, 200)
@@ -110,6 +124,7 @@ alignment = 1
 
 [node name="HeroSlots" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=10520850]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(0, 200)
 custom_maximum_size = Vector2(-1, 200)
 layout_mode = 2
@@ -153,12 +168,24 @@ fit_content = true
 
 [node name="StartQuestButton" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer2" unique_id=981574103]
 unique_name_in_owner = true
+visible = false
 custom_minimum_size = Vector2(0, 36)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 4
 texture_normal = ExtResource("5_aaf06")
 texture_pressed = ExtResource("6_duem3")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer2/StartQuestButton" unique_id=1595669025]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Отправить отряд"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="DeleteQuestButton" type="TextureButton" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer2" unique_id=1704254565]
 visible = false
