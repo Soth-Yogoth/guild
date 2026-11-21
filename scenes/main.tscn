@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cnt7d63unuyw3" path="res://scripts/ui_elements/workspace.gd" id="2_tefeu"]
 [ext_resource type="PackedScene" uid="uid://cw27eml1ptyk" path="res://scenes/panels/quests_right_panel.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://b2x84yplhk7ui" path="res://scenes/panels/heroes_bottom_panel.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" path="res://scenes/panels/hero_details_popup.tscn" id="9_hero_details"]
 
 [node name="Control" type="Control" unique_id=709173346]
 layout_mode = 3
@@ -86,6 +87,9 @@ size_flags_vertical = 1
 custom_minimum_size = Vector2(0, 240)
 layout_mode = 2
 size_flags_vertical = 8
+
+[node name="HeroDetailsPopup" parent="." instance=ExtResource("9_hero_details")]
+visible = false
 
 [connection signal="pressed" from="VBoxContainer/HBoxContainer/StartDayButton" to="." method="_on_button_pressed"]
 [connection signal="on_close_button_pressed" from="VBoxContainer/HBoxContainer2/Workspace/QuestView" to="VBoxContainer/HBoxContainer2/Workspace" method="_on_quest_info_closed"]

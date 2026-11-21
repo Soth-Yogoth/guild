@@ -50,6 +50,7 @@ static func create_from_data(data: HeroData) -> Hero:
 	instance.hp_max = data.hp_max
 	instance.hp_current = instance.hp_max
 	instance.atk = data.atk
+	instance.intelligence = data.intelligence
 	instance.luck = data.luck
 	
 	return instance

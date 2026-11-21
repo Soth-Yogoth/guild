@@ -38,8 +38,4 @@ func on_hero_preview_lose_drag(hero_preview : HeroPreview) -> void:
 	hero_preview.unlock()
  
 func return_hero(hero : Hero) -> void:
-	
-	var hero_preview := hero_dictionary[hero]
-	
-	hero_preview.modulate = Color.WHITE
-	hero_preview.mouse_filter = Control.MOUSE_FILTER_STOP
+	hero_dictionary[hero].unlock()

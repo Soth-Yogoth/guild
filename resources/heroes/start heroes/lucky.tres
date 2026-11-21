@@ -6,6 +6,6 @@
 script = ExtResource("1_j0nva")
 name = "Лаки"
 hp_max = 6
-atk = 2
-luck = 6
+intelligence = 1
+luck = 4
 metadata/_custom_type_script = "uid://dq5rnd3xwvu0m"

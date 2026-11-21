@@ -2,11 +2,8 @@ class_name HeroView extends Control
 
 var hero : Hero
 
-var name_label: RichTextLabel
-
-var hp_bar: TextureProgressBar
-var atk_bar: TextureProgressBar
-var luck_bar: TextureProgressBar
+@onready var name_label: RichTextLabel = %NameLabel
+@onready var stats := %HeroStats
 
 func fill(hero_data: Hero) -> void:
 	
@@ -14,6 +11,4 @@ func fill(hero_data: Hero) -> void:
 	
 	name_label.text = hero_data.name
 	
-	hp_bar.value = hero_data.hp_current
-	atk_bar.value = hero_data.atk
-	luck_bar.value = hero_data.luck
+	stats.fill(hero_data)

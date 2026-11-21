@@ -13,6 +13,10 @@ const max_value = 8
 	set(value):
 		atk = clampf(value, 0.0, max_value)
 		
+@export var intelligence: int = 0:
+	set(value):
+		intelligence = clampi(value, 0, max_value)
+
 @export var luck: int = 1:
 	set(value):
 		luck = clampf(value, 0.0, max_value)

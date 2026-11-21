@@ -1,9 +1,10 @@
 extends Node
 
-var hero_panel : HeroPanel
-
-func set_hero_panel(panel : HeroPanel) -> void:
-	hero_panel = panel
+signal quest_selected(quest: Quest)
+signal hero_selected(hero: Hero)
 
 func FillData() -> void:
 	pass
+
+func SelectQuest(quest: Quest) -> void: 
+	quest_selected.emit(quest)

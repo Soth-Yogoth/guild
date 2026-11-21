@@ -5,6 +5,7 @@
 [resource]
 script = ExtResource("1_ljxfa")
 name = "Годвин"
-atk = 4
+atk = 2
+intelligence = 1
 luck = 2
 metadata/_custom_type_script = "uid://dq5rnd3xwvu0m"

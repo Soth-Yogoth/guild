@@ -42,7 +42,7 @@ func _return_to_roster(returned_hero: Hero) -> void:
 	HeroManager.return_hero_into_stuck(returned_hero)
 	hero_removed.emit(returned_hero)
 
-func _on_hero_preview_close_button_pressed() -> void:
+func return_hero_to_roster() -> void:
 	
 	var previous_hero := hero
 	_set_hero(null)
@@ -52,4 +52,4 @@ func _on_hero_preview_dragged(preview: HeroPreview) -> void:
 	preview.hide()
 
 func _on_hero_preview_drag_lose(preview: HeroPreview) -> void:
-	preview.show()
+	preview.visible = hero != null

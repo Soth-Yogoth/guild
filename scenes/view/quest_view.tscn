@@ -108,7 +108,8 @@ size_flags_vertical = 8
 theme_override_constants/separation = 200
 alignment = 1
 
-[node name="VBoxContainer3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=10520850]
+[node name="HeroSlots" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=10520850]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 200)
 custom_maximum_size = Vector2(-1, 200)
 layout_mode = 2
@@ -116,17 +117,17 @@ size_flags_vertical = 8
 theme_override_constants/separation = 10
 alignment = 1
 
-[node name="EmptyHeroPreview" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer3" unique_id=2110942247 instance=ExtResource("4_c5el2")]
+[node name="EmptyHeroPreview" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/HeroSlots" unique_id=2110942247 instance=ExtResource("4_c5el2")]
 layout_mode = 2
 mouse_filter = 1
 
-[node name="EmptyHeroPreview2" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer3" unique_id=968236914 instance=ExtResource("4_c5el2")]
+[node name="EmptyHeroPreview2" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/HeroSlots" unique_id=968236914 instance=ExtResource("4_c5el2")]
 layout_mode = 2
 
-[node name="EmptyHeroPreview3" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer3" unique_id=608489903 instance=ExtResource("4_c5el2")]
+[node name="EmptyHeroPreview3" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/HeroSlots" unique_id=608489903 instance=ExtResource("4_c5el2")]
 layout_mode = 2
 
-[node name="EmptyHeroPreview4" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/VBoxContainer3" unique_id=347638803 instance=ExtResource("4_c5el2")]
+[node name="EmptyHeroPreview4" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2/HeroSlots" unique_id=347638803 instance=ExtResource("4_c5el2")]
 layout_mode = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer/VBoxContainer2" unique_id=482969715]
