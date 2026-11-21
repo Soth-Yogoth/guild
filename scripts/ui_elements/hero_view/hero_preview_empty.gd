@@ -1,42 +1,55 @@
-extends Control
+class_name QuestHeroSlot extends Control
 
 signal hero_added(hero: Hero)
 signal hero_removed(hero: Hero)
 
-@onready var hero_preview := %HeroPreview
-var hero_preview_buffer : HeroPreview
+@onready var hero_preview := %HeroPreview as HeroPreview
 
-var hero : Hero
+var hero: Hero
 
 func _can_drop_data(pos, data) -> bool:
+	return data is HeroPreview and data.hero != null and data != hero_preview
 
-	return data is Hero
-	
 func _drop_data(pos, data) -> void:
 	
-	if (not hero == null):
-		HeroManager.return_hero_into_stuck(hero)
+	var dragged_preview := data as HeroPreview
+	var source_slot := dragged_preview.get_parent() as QuestHeroSlot
+	var previous_hero := hero
+	_set_hero(dragged_preview.hero)
+
+	if source_slot != null:
+		source_slot._set_hero(previous_hero)
+	else:
+		_return_to_roster(previous_hero)
+		hero_added.emit(hero)
+
+func _set_hero(new_hero: Hero) -> void:
 	
-	hero = data
-	hero_added.emit(hero)
-	
-	hero_preview.show()
-	hero_preview.fill(data)
+	hero = new_hero
+	hero_preview.visible = hero != null
+	if hero == null:
+		hero_preview.hero = null
+		return
+
+	hero_preview.fill(hero)
 	hero_preview.mouse_filter = MOUSE_FILTER_PASS
+
+func _return_to_roster(returned_hero: Hero) -> void:
+	
+	if returned_hero == null:
+		return
+
+	HeroManager.return_hero_into_stuck(returned_hero)
+	hero_removed.emit(returned_hero)
 
 func _on_hero_preview_close_button_pressed() -> void:
 	
-	HeroManager.return_hero_into_stuck(hero)
-	hero_preview.hide()
+	var previous_hero := hero
+	_set_hero(null)
+	_return_to_roster(previous_hero)
 
-func _on_hero_preview_dragged(hero_preview: HeroPreview) -> void:
-	
-	hero = null
-	
-	hero_preview.hide()
-	hero_preview.mouse_filter = MOUSE_FILTER_IGNORE
+func _on_hero_preview_dragged(preview: HeroPreview) -> void:
+	preview.hide()
 
-func _on_hero_preview_drag_lose(hero_preview: HeroPreview) -> void:
-	
-	hero_preview.show()
-	hero_preview.mouse_filter = MOUSE_FILTER_STOP
+func _on_hero_preview_drag_lose(preview: HeroPreview) -> void:
+	preview.show()

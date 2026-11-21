@@ -5,6 +5,7 @@ static var lastID := 0
 signal max_hp_value_changed(value: int)
 signal current_hp_value_changed(value: int)
 signal atk_value_changed(value: int)
+signal intelligence_value_changed(value: int)
 signal luck_value_changed(value: int)
 
 var id: int
@@ -20,6 +21,11 @@ var atk: int :
 	set(value):
 		atk = value
 		atk_value_changed.emit(value)
+		
+var intelligence: int :
+	set(value):
+		intelligence = value
+		intelligence_value_changed.emit(value)
 		
 var luck: int :
 	set(value):
@@ -47,3 +53,14 @@ static func create_from_data(data: HeroData) -> Hero:
 	instance.luck = data.luck
 	
 	return instance
+	
+func get_skill_value(skill_name: SkillRequirement.Skill) -> int:
+	
+	match skill_name:
+		
+		SkillRequirement.Skill.MIGHT: return atk
+		SkillRequirement.Skill.INTELLIGENCE: return intelligence
+		SkillRequirement.Skill.LUCK: return luck
+		
+	return 0
+	

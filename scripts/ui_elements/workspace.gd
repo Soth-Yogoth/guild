@@ -3,8 +3,8 @@ extends Control
 @onready var quest_info_panel := %QuestView as QuestView
 @onready var new_quest_info_panel := %NewQuestView
 
-var last_workspace := quest_info_panel
-var current_workspace := quest_info_panel
+@onready var last_workspace := new_quest_info_panel
+@onready var current_workspace := new_quest_info_panel
 
 func _can_drop_data(pos, data) -> bool:
 

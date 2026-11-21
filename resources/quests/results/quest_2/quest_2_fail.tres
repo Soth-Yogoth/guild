@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuestResult" format=3 uid="uid://cs8vvw804lft0"]
+
+[ext_resource type="Script" uid="uid://d1nxllvp3tcub" path="res://scripts/resources/quest/quest_result.gd" id="1_result"]
+[ext_resource type="Script" uid="uid://1mjh8vqsnqmx" path="res://scripts/resources/quest/skill_requirement.gd" id="1_syu56"]
+
+[resource]
+script = ExtResource("1_result")
+id = "quest_2_fail"
+title = "Часть урожая осталась на поле"
+description = "Герои не успели собрать весь урожай, но за помощь фермер всё равно выплатил половину обещанной награды."
+reward_modifier = 0.5
+recommended_party_size = Array[int]([1, 2])

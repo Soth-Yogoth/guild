@@ -1,12 +1,19 @@
 [gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://3l4gbdyej4ka"]
 
-[ext_resource type="Script" uid="uid://brf0d226jrpyi" path="res://scripts/resources/quest_data.gd" id="1_l3tct"]
+[ext_resource type="Script" uid="uid://brf0d226jrpyi" path="res://scripts/resources/quest/quest_data.gd" id="1_l3tct"]
+[ext_resource type="Script" uid="uid://d1nxllvp3tcub" path="res://scripts/resources/quest/quest_result.gd" id="2_result"]
+[ext_resource type="Resource" path="res://resources/quests/results/quest_2/quest_2_bonus_success.tres" id="3_outcome"]
+[ext_resource type="Resource" path="res://resources/quests/results/quest_2/quest_2_success.tres" id="4_outcome"]
+[ext_resource type="Resource" path="res://resources/quests/results/quest_2/quest_2_fail.tres" id="5_outcome"]
 
 [resource]
 script = ExtResource("1_l3tct")
+id = "2"
 title = "Помощь на ферме"
 description = "Мне нужна пара крепких ребят для работы на ферме. Урожая в этом году много и рабочие руки нужны как никогда прежде. Конечно, за хорошо выполненную работу я щедро заплачу."
 deadline = 3
 upfront = 100
 reward = 400
+positive_scenario = Array[ExtResource("2_result")]([ExtResource("3_outcome"), ExtResource("4_outcome")])
+negative_scenario = Array[ExtResource("2_result")]([ExtResource("5_outcome")])
 metadata/_custom_type_script = "uid://brf0d226jrpyi"

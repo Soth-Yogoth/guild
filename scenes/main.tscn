@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8e74mvklo0hn"]
 
 [ext_resource type="Script" uid="uid://cw6xgetwyhusd" path="res://scripts/systems/ui_manager.gd" id="1_o6xl0"]
+[ext_resource type="Script" uid="uid://c7lwe2e0kn5pd" path="res://scripts/main.gd" id="1_tipki"]
 [ext_resource type="PackedScene" uid="uid://mih5m0vif8pt" path="res://scenes/view/new_quest_view.tscn" id="2_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://dqvhftssnynyn" path="res://assets/img/icons/coin.png" id="2_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dj6hc8wdf286h" path="res://scenes/view/quest_view.tscn" id="2_tbgi4"]
@@ -15,7 +16,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_o6xl0")
+script = ExtResource("1_tipki")
 
 [node name="UI" type="Control" parent="." unique_id=1415593130]
 anchors_preset = 0

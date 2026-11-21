@@ -1,23 +1,23 @@
 extends Node
 
-
 func calculate_result(quest: Quest, party: Array[Hero]) -> void:
 	
 	pass
 	
-func calculate_chance(quest: Quest, party: Array[Hero]) -> float:
+func calculate_success_chance(quest: Quest, party: Array[Hero]) -> float:
 	
-	var chance: = 0
+	if quest == null or party.size() == 0: 
+		return 0
 	
-	for size in quest.recommended_party_size:
-		
-		var value = 99 - pow((size - party.size()), 2) * 10
-		chance = value if value > chance else chance
-		
-	for requirement in quest.requirement_skills:
-		
-		var value = chance * 
-		
-	chance += quest.requirementHeroesMin
+	var success_result_value := 0.0
+	var fail_result_value := 0.0
 	
-	return 0
+	for result in quest.positive_scenario:
+		success_result_value += result.calculate_chance(party)
+		
+	for result in quest.negative_scenario:
+		success_result_value += result.calculate_chance(party)
+		
+	var chance = 100 / (success_result_value + fail_result_value) * success_result_value
+	
+	return chance

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="QuestResult" format=3 uid="uid://dwglhyuc1f25n"]
+
+[ext_resource type="Script" uid="uid://d1nxllvp3tcub" path="res://scripts/resources/quest/quest_result.gd" id="1_result"]
+[ext_resource type="Script" uid="uid://1mjh8vqsnqmx" path="res://scripts/resources/quest/skill_requirement.gd" id="2_requirement"]
+
+[sub_resource type="Resource" id="Resource_requirement_0"]
+script = ExtResource("2_requirement")
+method = 0
+requirement_value = 2
+
+[resource]
+script = ExtResource("1_result")
+id = "quest_3_success"
+title = "Крысы разбежались"
+description = "Герои одержали победу над крысами, но парочке крыс удалось скрыться. Возможно, они вернутся позже."
+reward_modifier = 1.0
+requirement_skills = Array[ExtResource("2_requirement")]([SubResource("Resource_requirement_0")])

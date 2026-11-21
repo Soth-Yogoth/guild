@@ -1,12 +1,19 @@
 [gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://c81iejb3otclf"]
 
-[ext_resource type="Script" uid="uid://brf0d226jrpyi" path="res://scripts/resources/quest_data.gd" id="1_pv60y"]
+[ext_resource type="Script" uid="uid://brf0d226jrpyi" path="res://scripts/resources/quest/quest_data.gd" id="1_pv60y"]
+[ext_resource type="Script" uid="uid://d1nxllvp3tcub" path="res://scripts/resources/quest/quest_result.gd" id="2_result"]
+[ext_resource type="Resource" uid="uid://ln021bfp213o" path="res://resources/quests/results/quest_3/quest_3_full_success.tres" id="3_outcome"]
+[ext_resource type="Resource" uid="uid://dwglhyuc1f25n" path="res://resources/quests/results/quest_3/quest_3_success.tres" id="4_outcome"]
+[ext_resource type="Resource" uid="uid://7gvd8nkont7g" path="res://resources/quests/results/quest_3/quest_3_fail.tres" id="5_outcome"]
 
 [resource]
 script = ExtResource("1_pv60y")
+id = "3"
 title = "Крысы в подвале"
 description = "Это невыносимо! Я уже три дня не могу нормально поспать, а всё из-за этого писка. Писк доносится из подвала — судя по всему, там завелись крысы. Вы же поможете мне от них избавиться?"
 deadline = 3
 upfront = 200
 reward = 300
+positive_scenario = Array[ExtResource("2_result")]([ExtResource("3_outcome"), ExtResource("4_outcome")])
+negative_scenario = Array[ExtResource("2_result")]([ExtResource("5_outcome")])
 metadata/_custom_type_script = "uid://brf0d226jrpyi"

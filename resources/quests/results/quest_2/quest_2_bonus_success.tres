@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuestResult" format=3 uid="uid://bfbkorx44l15e"]
+
+[ext_resource type="Script" uid="uid://1mjh8vqsnqmx" path="res://scripts/resources/quest/skill_requirement.gd" id="1_puemk"]
+[ext_resource type="Script" uid="uid://d1nxllvp3tcub" path="res://scripts/resources/quest/quest_result.gd" id="1_result"]
+
+[resource]
+script = ExtResource("1_result")
+id = "quest_2_bonus_success"
+title = "Урожай собран с запасом времени"
+description = "Герои собрали весь урожай и даже помогли с другой работой на ферме. Фермер остался доволен и увеличил размер вознаграждения."
+reward_modifier = 1.5
+recommended_party_size = Array[int]([4])

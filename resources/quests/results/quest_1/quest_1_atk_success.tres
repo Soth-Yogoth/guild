@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuestResult" format=3 uid="uid://baxm7qhseq7mj"]
+
+[ext_resource type="Script" path="res://scripts/resources/quest/quest_result.gd" id="1_result"]
+
+[resource]
+script = ExtResource("1_result")
+id = "quest_1_atk_success"
+title = "Хулиганы спугнуты"
+description = "Герои сидели в засаде до полуночи. Когда хулиганы объявились, герои их спугнули. Теперь хулиганы не скоро вернутся."
+reward_modifier = 1.0
+recommended_party_size = Array[int]([3, 4])

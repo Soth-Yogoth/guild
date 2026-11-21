@@ -1,12 +1,19 @@
 [gd_resource type="Resource" script_class="QuestData" format=3 uid="uid://cgvv2xd0dt5vp"]
 
-[ext_resource type="Script" uid="uid://brf0d226jrpyi" path="res://scripts/resources/quest_data.gd" id="1_146rn"]
+[ext_resource type="Script" uid="uid://brf0d226jrpyi" path="res://scripts/resources/quest/quest_data.gd" id="1_146rn"]
+[ext_resource type="Script" uid="uid://d1nxllvp3tcub" path="res://scripts/resources/quest/quest_result.gd" id="2_result"]
+[ext_resource type="Resource" uid="uid://baxm7qhseq7mj" path="res://resources/quests/results/quest_1/quest_1_atk_success.tres" id="3_outcome"]
+[ext_resource type="Resource" uid="uid://l43hpffc4io5" path="res://resources/quests/results/quest_1/quest_1_int_success.tres" id="4_outcome"]
+[ext_resource type="Resource" uid="uid://bfnmgsjbqsw5v" path="res://resources/quests/results/quest_1/quest_1_fail.tres" id="5_outcome"]
 
 [resource]
 script = ExtResource("1_146rn")
+id = "1"
 title = "Хулиганы в таверне"
 description = "Я управляю таверной \"Рокочущий ворон\" на севере нашего города и до недавнего времени дела шли просто отлично. А потом кто-то повадился писать непристойности прямо на стенах моей таверны! Я уверен, это дело рук моего конкурента, Бобби Шаромыги, и его шайки. Прошу вас, помогите мне найти и проучить этих паршивцев !"
 deadline = 3
 upfront = 20
 reward = 80
+positive_scenario = Array[ExtResource("2_result")]([ExtResource("3_outcome"), ExtResource("4_outcome")])
+negative_scenario = Array[ExtResource("2_result")]([ExtResource("5_outcome")])
 metadata/_custom_type_script = "uid://brf0d226jrpyi"

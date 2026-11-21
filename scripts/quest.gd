@@ -6,8 +6,8 @@ var description: String
 var deadline: int
 var reward: int
 
-var recommended_party_size: Array[int] = [1, 2, 3, 4]
-var requirement_skills: Array[SkillRequirement] = []
+var positive_scenario: Array[QuestResult]
+var negative_scenario: Array[QuestResult]
 
 func _init(data: QuestData) -> void:
 
@@ -16,5 +16,5 @@ func _init(data: QuestData) -> void:
 	self.deadline = data.deadline
 	self.reward = data.reward
 	
-	self.recommended_party_size = data.recommended_party_size
-	self.requirement_skills = data.requirement_skills
+	self.positive_scenario = data.positive_scenario
+	self.negative_scenario = data.negative_scenario

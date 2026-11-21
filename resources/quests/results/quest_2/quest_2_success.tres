@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuestResult" format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/quest/quest_result.gd" id="1_result"]
+
+[resource]
+script = ExtResource("1_result")
+id = "quest_2_success"
+title = "Урожай собран"
+description = "Героям удалось собрать весь урожай."
+reward_modifier = 1.0
+recommended_party_size = Array[int]([2, 3, 4])
